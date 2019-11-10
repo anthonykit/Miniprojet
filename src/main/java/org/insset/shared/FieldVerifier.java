@@ -52,12 +52,18 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
+         if (nbr <= 0 || nbr >= 2000) {
+             
+            return false;
+         }
         return true;
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
+        if (nbr == null || nbr.isEmpty() || !nbr.matches("^(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")){
+          return false;
+        
+      }
         return true;
     }
 
